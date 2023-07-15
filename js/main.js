@@ -7,3 +7,14 @@ function updatemenu() {
     }
 }
 
+// Función para abrir el modal
+function openModal() {
+    var modal = document.getElementById("myModal");
+    modal.showModal();
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.close();
+}

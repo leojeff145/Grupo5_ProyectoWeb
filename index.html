@@ -16,15 +16,18 @@
             <div class="logo">
                 <img src="img/logot.png" alt="logo">
             </div>
-            <div class="botones">
-                <a href="html/login.html" id="login_link">Iniciar Sesion</a>
-            </div>
+            <button class="botones" id="openModal" onclick="openModal()">Iniciar Sesión</button>
+            <dialog id="myModal">
+                <button id="closeModal" onclick="closeModal()">&times;</button>
+                <iframe src="html/login.html"></iframe>
+            </dialog>
+            <script src="js/main.js"></script>
         </div>
 
         <div class="navbar" id="menu">
             <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
             <ul>
-                <li><a href='http://'>Inicio</a></li>
+                <li><a href='index.html'>Inicio</a></li>
                 <li><a class='dropdown-arrow' href='http://'>Comprar</a>
                     <ul class='sub-menus'>
                         <li><a href='http://'>Casa</a></li>
@@ -37,15 +40,7 @@
                         <li><a href='http://'>Casa</a></li>
                         <li><a href='http://'>Departamento</a></li>
                         <li><a href='http://'>Terreno/Lote</a></li>
-                    </ul>
-                </li>
-                <li><a class='dropdown-arrow' href='http://'>Vender</a>
-                    <ul class='sub-menus'>
-                        <li><a href='http://'>Casa</a></li>
-                        <li><a href='http://'>Departamento</a></li>
-                        <li><a href='http://'>Terreno/Lote</a></li>
-                    </ul>
-                </li>
+                    </ul>                
                 <li><a href='http://'>Quienes Somos</a></li>
                 <li><a href='http://'>Contactos</a></li>
             </ul>
@@ -65,7 +60,7 @@
             </div>
             <div class="subContenido">
                 <div class="casas">
-                    Casas aqui
+
                 </div>
                 <div class="mensajes">
                     Mensajes aqui
