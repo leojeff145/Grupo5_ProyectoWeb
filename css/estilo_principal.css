@@ -252,6 +252,8 @@ iframe {
 }
 
 .contenido .galeria section img {
+    border-radius: 10px;
+    margin: 5px;
     width: 0%;
     flex-grow: 1;
     object-fit: cover;
@@ -304,9 +306,9 @@ iframe {
     grid-area: pie;
     display: grid;
     background-color: #007BFF;
-    grid-template-areas: 'redS  enlaces infoCont    polit   mapa'
-        'derecho   derecho derecho derecho derecho';
-    grid-template-columns: 15% 10% 20% 15% auto;
+    grid-template-areas: 'redS  infoCont    polit   mapa'
+                            'derecho derecho derecho derecho';
+    grid-template-columns: 20% 20% 15% auto;
     grid-template-rows: 80% 20%;
     gap: 5px;
 }
@@ -336,15 +338,6 @@ iframe {
     height: 100%;
 }
 
-.pie .enlaces {
-    grid-area: enlaces;
-    color: #000000;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 90%;
-    padding: auto;
-}
 
 .pie .enlaces a {
     color: #000000;

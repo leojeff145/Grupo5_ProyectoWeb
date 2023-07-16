@@ -19,6 +19,18 @@ function closeModal() {
     modal.close();
 }
 
+// Función para abrir el modal
+function openModal_r() {
+    var modal = document.getElementById("modal_r");
+    modal.showModal();
+}
+
+// Función para cerrar el modal
+function closeModal_r() {
+    var modal = document.getElementById("modal_r");
+    modal.close();
+}
+
 
 
 

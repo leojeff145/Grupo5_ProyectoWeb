@@ -15,12 +15,17 @@
     <div class="parent">
         <div class="cabecera">
             <div class="logo">
-                <img src="img/logot.png" alt="logo">
+                <a href="index.html"><img src="img/logot.png" alt="logo"></a>
             </div>
             <button class="botones" id="openModal" onclick="openModal()">Iniciar Sesión</button>
+            <button class="botones" id="openModal" onclick="openModal_r()">Registrarse</button>
             <dialog id="myModal">
                 <button id="closeModal" onclick="closeModal()">&times;</button>
                 <iframe src="html/login.html"></iframe>
+            </dialog>
+            <dialog id="modal_r">
+                <button id="closeModal" onclick="closeModal_r()">&times;</button>
+                <iframe src="html/register.html"></iframe>
             </dialog>
             <script src="js/main.js"></script>
         </div>
@@ -42,7 +47,7 @@
                         <li><a href='http://'>Departamento</a></li>
                         <li><a href='http://'>Terreno/Lote</a></li>
                     </ul>
-                <li><a href='#' id="opcion1">Quienes Somos</a></li>
+                <li><a href='#' id="opcion_quienes">Quienes Somos</a></li>
                 <li><a href='http://'>Contactos</a></li>
             </ul>
             </nav>
@@ -61,7 +66,7 @@
                 </section>
             </div>
             <div class="subContenido">
-                <div class="casas" id="contenido">
+                <div class="casas" id="mostrar">
                     <div class="cont_gif">
                         <img src="img/animacion2.gif" alt="animacion">
                     </div>
@@ -76,38 +81,35 @@
             <div class="redes_sociales">
                 <h4>Redes Sociales:</h4>
                 <div class="facebook">
-                    <a href="https://www.facebook.com/tu_pagina_de_facebook"><img src="img/facebook.svg"
+                    <a href="https://www.facebook.com/tu_pagina_de_facebook" target="_blank"><img src="img/facebook.svg"
                             alt="facebook"></a>
                 </div>
                 <div class="instagram">
-                    <a href="https://www.instagram.com/tu_cuenta_de_instagram"><img src="img/instagram.svg"
+                    <a href="https://www.instagram.com/tu_cuenta_de_instagram" target="_blank"><img src="img/instagram.svg"
                             alt="instagram"></a>
                 </div>
                 <div class="whatsapp">
-                    <a href="https://api.whatsapp.com/send?phone=tu_numero_de_telefono"><img src="img/whatsapp.svg"
+                    <a href="https://api.whatsapp.com/send?phone=tu_numero_de_telefono" target="_blank"><img src="img/whatsapp.svg"
                             alt="whatsapp"></a>
                 </div>
             </div>
-
-            <div class="enlaces">
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </div>
+            
 
             <div class="informacion_contacto">
+                <h3>Información de contacto:</h3>
                 <p>Dirección: Av. Genral Rumiñahui, Sangolqui, Ecuador</p>
                 <p>Teléfono: +123456789</p>
                 <p>Correo electrónico: info@hometoken.com</p>
             </div>
 
             <div class="politicas">
+                <h3>Políticas:</h3>
                 <ul>
-                    <li><a href="politica_privacidad.html">Política de privacidad</a></li>
-                    <li><a href="terminos_condiciones.html">Términos y condiciones</a></li>
-                    <li><a href="politica_cookies.html">Política de cookies</a></li>
+                    <li><a href="#" id="politicas">Política de privacidad</a></li>
+                    <br>
+                    <li><a href="#" id="terminos">Términos y condiciones</a></li>
+                    <br>
+                    <li><a href="#" id="cookies">Política de cookies</a></li>
                 </ul>
             </div>
 
