@@ -1,37 +1,14 @@
-$(document).ready(function () {
-    $('#opcion1').click(function (event) {
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('opcion1').addEventListener('click', function (event) {
         event.preventDefault();
 
-        $.ajax({
-            url: 'html/archivo1.html', // Ruta relativa al archivo1.html
-            dataType: 'html',
-            success: function (data) {
-                $('#contenido').html(data);
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('contenido').innerHTML = xhr.responseText;
             }
-        });
-    });
-
-    $('#opcion2').click(function (event) {
-        event.preventDefault();
-
-        $.ajax({
-            url: 'html/archivo2.html', // Ruta relativa al archivo2.html
-            dataType: 'html',
-            success: function (data) {
-                $('#contenido').html(data);
-            }
-        });
-    });
-
-    $('#opcion3').click(function (event) {
-        event.preventDefault();
-
-        $.ajax({
-            url: 'html/archivo3.html', // Ruta relativa al archivo3.html
-            dataType: 'html',
-            success: function (data) {
-                $('#contenido').html(data);
-            }
-        });
-    });
+        };
+        xhr.open('GET', 'html/quienes_somos.html', true);
+        xhr.send();
+    });        
 });
