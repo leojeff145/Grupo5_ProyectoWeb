@@ -15,7 +15,6 @@ body {
     grid-template-rows: auto auto auto auto;
     height: 100%;
     width: 100%;
-    margin: 0;
 }
 
 .cabecera {
@@ -75,6 +74,9 @@ iframe {
 
 .navbar {
     grid-area: navbar;
+    position: sticky;
+    top: 0;
+    z-index: 100;    
 }
 
 #menu {
@@ -237,7 +239,6 @@ iframe {
 }
 
 .contenido .galeria {
-    background-color: #f5f5f5;
     display: flex;
     grid-area: galeria;
     justify-content: center;
@@ -275,10 +276,24 @@ iframe {
 
 
 .contenido .subContenido .casas {
-    border: 1px solid black;
     grid-area: casas;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}   
+
+.contenido .subContenido .casas .cont_gif{  
+    width: 80%;
+    height: auto;
+    margin-top: 20px;    
 }
 
+.contenido .subContenido .casas .cont_gif > img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
 .contenido .subContenido .mensajes {
     border: 1px solid black;
