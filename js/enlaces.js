@@ -11,6 +11,20 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.open('GET', 'html/quienes_somos.html', true);
         xhr.send();
     });
+
+    //galeria
+    document.getElementById('comp_casas').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('mostrar').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'html/casa.html', true);
+        xhr.send();
+    });
     
 
     //pie de pagina
