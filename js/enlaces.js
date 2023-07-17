@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.send();
     });
 
-    //galeria
-    document.getElementById('comp_casas').addEventListener('click', function (event) {
+    //galeria compra
+    document.getElementById('comp_casa').addEventListener('click', function (event) {
         event.preventDefault();
 
         var xhr = new XMLHttpRequest();
@@ -25,7 +25,72 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.open('GET', 'html/casa.html', true);
         xhr.send();
     });
+
+    document.getElementById('comp_depar').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('mostrar').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'html/depa.html', true);
+        xhr.send();
+    });
     
+    document.getElementById('comp_terreno').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('mostrar').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'html/terreno.html', true);
+        xhr.send();
+    });
+
+    //galeria arrriendo
+    document.getElementById('arriendo_casa').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('mostrar').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'html/casa.html', true);
+        xhr.send();
+    });
+
+    document.getElementById('arriendo_depar').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('mostrar').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'html/depa.html', true);
+        xhr.send();
+    });
+    
+    document.getElementById('arriendo_terreno').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('mostrar').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.open('GET', 'html/terreno.html', true);
+        xhr.send();
+    });
 
     //pie de pagina
     document.getElementById('politicas').addEventListener('click', function (event) {
