@@ -5,29 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Token</title>
-    <link rel="stylesheet" href="css/estilo_principal.css" type="text/css">
-    <link rel="shortcut icon" href="img/logot.png" type="image/x-icon">
-    <script src="js/main.js"></script>
-    <script src="js/enlaces.js"></script>
+    <link rel="stylesheet" href="../css/estilo_principal.css" type="text/css">       
+    <link rel="shortcut icon" href="../img/logot.png" type="image/x-icon">
+    <script src="../js/main.js"></script>
 </head>
 
 <body>
     <div class="parent">
         <div class="cabecera">
             <div class="logo">
-                <a href="index.html"><img src="img/logot.png" alt="logo"></a>
+                <a href="index.html"><img src="../img/logot.png" alt="logo"></a>
             </div>
-            <button class="botones" id="openModal" onclick="openModal()">Iniciar Sesión</button>
-            <button class="botones" id="openModal" onclick="openModal_r()">Registrarse</button>
-            <dialog id="myModal">
-                <button id="closeModal" onclick="closeModal()">&times;</button>
-                <iframe src="html/login.html"></iframe>
-            </dialog>
-            <dialog id="modal_r">
-                <button id="closeModal" onclick="closeModal_r()">&times;</button>
-                <iframe src="html/register.html"></iframe>
-            </dialog>
-            <script src="js/main.js"></script>
+            <div class="img_user">
+                <img src="../img/user.png" alt="usuario">
+            </div>
         </div>
 
         <div class="navbar" id="menu">
@@ -47,28 +38,30 @@
                         <li><a href='#' id="arriendo_depar">Departamento</a></li>
                         <li><a href='#' id="arriendo_terreno">Terreno/Lote</a></li>
                     </ul>
+                </li>
+                <li><a href='#'>Vender</a></li>
                 <li><a href='#' id="opcion_quienes">Quienes Somos</a></li>
                 <li><a href='#'>Contactos</a></li>
             </ul>
             </nav>
-            <script src="js/enlaces.js"></script>
+            <script src="../js/enlaces_internos.js"></script>
         </div>
 
         <div class="contenido">
             <div class="galeria">
                 <section>
-                    <img src="img/casa1.jpg" alt="casa1">
-                    <img src="img/casa2.jpg" alt="casa2">
-                    <img src="img/departamento4.jpg" alt="casa3">
-                    <img src="img/departamento5.jpg" alt="casa4">
-                    <img src="img/terreno8.jpg" alt="casa5">
-                    <img src="img/terreno4.jpg" alt="casa6">
+                    <img src="../img/casa1.jpg" alt="casa1">
+                    <img src="../img/casa2.jpg" alt="casa2">
+                    <img src="../img/departamento4.jpg" alt="casa3">
+                    <img src="../img/departamento5.jpg" alt="casa4">
+                    <img src="../img/terreno8.jpg" alt="casa5">
+                    <img src="../img/terreno4.jpg" alt="casa6">
                 </section>
             </div>
             <div class="subContenido">
                 <div class="casas" id="mostrar">
                     <div class="cont_gif">
-                        <img src="img/animacion2.gif" alt="animacion">
+                        <img src="../img/animacion2.gif" alt="animacion">
                     </div>
                 </div>
                 <div class="mensajes">
@@ -81,15 +74,15 @@
             <div class="redes_sociales">
                 <h4>Redes Sociales:</h4>
                 <div class="facebook">
-                    <a href="https://www.facebook.com/tu_pagina_de_facebook" target="_blank"><img src="img/facebook.svg"
+                    <a href="https://www.facebook.com/tu_pagina_de_facebook" target="_blank"><img src="../img/facebook.svg"
                             alt="facebook"></a>
                 </div>
                 <div class="instagram">
                     <a href="https://www.instagram.com/tu_cuenta_de_instagram" target="_blank"><img
-                            src="img/instagram.svg" alt="instagram"></a>
+                            src="../img/instagram.svg" alt="instagram"></a>
                 </div>
                 <div class="whatsapp">
-                    <a href="https://api.whatsapp.com/send?phone=0986267303" target="_blank"><img src="img/whatsapp.svg"
+                    <a href="https://api.whatsapp.com/send?phone=0986267303" target="_blank"><img src="../img/whatsapp.svg"
                             alt="whatsapp"></a>
                 </div>
             </div>

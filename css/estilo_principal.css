@@ -9,9 +9,9 @@ body {
 .parent {
     display: grid;
     grid-template-areas: 'cabecera  cabecera    cabecera'
-        'navbar     navbar      navbar'
-        'contenido  contenido   contenido'
-        'pie        pie         pie';
+                         'navbar     navbar      navbar'
+                         'contenido  contenido   contenido'
+                         'pie        pie         pie';
     grid-template-rows: auto auto auto auto;
     height: 100%;
     width: 100%;
@@ -234,7 +234,7 @@ iframe {
     grid-area: contenido;
     display: grid;
     grid-template-areas: 'galeria   galeria   galeria'
-        'subContenido   subContenido   subContenido';
+                         'subContenido   subContenido   subContenido';
 
 }
 
@@ -305,8 +305,8 @@ iframe {
     grid-area: pie;
     display: grid;
     background-color: #007BFF;
-    grid-template-areas: 'redS  infoCont    polit   mapa'
-                            'derecho derecho derecho derecho';
+    grid-template-areas: 'redS  infoCont  polit   mapa'
+                         'derecho derecho derecho derecho';
     grid-template-columns: 20% 20% 15% auto;
     grid-template-rows: 80% 20%;
     gap: 5px;
