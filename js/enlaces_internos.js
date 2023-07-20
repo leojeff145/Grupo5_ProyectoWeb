@@ -9,23 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('mostrar').innerHTML = xhr.responseText;
             }
         };
-        xhr.open('GET', 'document.html', true);
+        xhr.open('GET', 'sis_html/document.html', true);
         xhr.send();
     });
-	
-	document.getElementById('opcion_quienes').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                document.getElementById('mostrar').innerHTML = xhr.responseText;
-            }
-        };
-        xhr.open('GET', 'document.html', true);
-        xhr.send();
-    });
-	
+		
 	document.getElementById('opcion_quienes').addEventListener('click', function (event) {
         event.preventDefault();
 
