@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+	
+	<style>
+		  .content-with-image {
+            display: flex;
+            align-items: center;
+        }
+
+        .content-with-image p {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .content-with-image img {
+            flex: 1;
+            padding: 10px;
+            max-width: 50%;
+            height: auto;
+            transition: opacity 0.5s ease;
+		}
+		
+		.cont_img{
+    		display: grid;
+   			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   			gap: 50px;
+   			padding: 5%;
+		}
+	</style>
+</head>
+
+<body>
+    <h1>Inicio HOME TOKEN</h1>
+    <div class="cont_img">
+        <main>
+        <div class="content-with-image" id="Parrafo1">
+            <p class="texto1" style="padding: 5%;
+    		text-align: justify;
+    		font-size: 100%;
+    		display: flex;
+    		flex-direction: row;
+    		justify-content: space-between;">
+                Testimonios:
+"Los agentes de Home Token fueron extremadamente profesionales y me brindaron un excelente servicio. Gracias a su asesoramiento experto, pude encontrar la casa de mis sueños en poco tiempo. ¡Recomendaría a Home Token a cualquier persona que esté buscando una experiencia inmobiliaria sin problemas!" - Ana G.
+				<br><br>
+"Estoy muy satisfecho con el servicio de Home Token. No solo encontraron rápidamente un inquilino para mi propiedad de inversión, sino que también se encargaron de todos los detalles del proceso de alquiler. Son muy confiables y eficientes. Sin duda, seguiré utilizando sus servicios en el futuro". - Carlos M.
+            </p>
+            <img src="img/Testimonios-de-clientes.jpg" alt="Img">
+        </div>
+
+        <div class="content-with-image" id="Parrafo2">
+            <p class="texto2" style="padding: 5%;
+    		text-align: justify;
+    		font-size: 100%;
+    		display: flex;
+    		flex-direction: row-reverse;
+    		justify-content: space-between;">
+                Información adicional:
+"En Home Token, nos especializamos en brindar soluciones inmobiliarias integrales en todo Ecuador. Nuestro equipo de profesionales altamente capacitados está comprometido en ayudarte a encontrar la propiedad perfecta, ya sea que estés buscando comprar una casa, alquilar un departamento o invertir en lotes y terrenos. Nos enorgullece ofrecer asesoramiento experto, una amplia cartera de propiedades seleccionadas y un servicio personalizado para cumplir con tus necesidades específicas".
+<br><br>
+Llamada a la acción:
+"¡Descubre tu hogar ideal con Home Token! Explora nuestras propiedades y encuentra la casa o departamento perfecto para ti. Haz clic en 'Ver más' para explorar nuestras propiedades destacadas y descubrir cómo podemos ayudarte a alcanzar tus metas inmobiliarias. ¿Listo para dar el siguiente paso? ¡Contáctanos ahora y permítenos ayudarte en tu búsqueda!"
+            </p>
+            <img src="img/tu-casa-ideal.jpg" alt="Img">
+        </div>
+		</main>
+    </div>
+</body>
+
+</html>
