@@ -1,0 +1,133 @@
+@charset "utf-8";
+/* CSS Document */
+/* Estilos generales del formulario */
+.cont_envio {
+    width: 95%;
+    margin:5px;
+    font-family: sans-serif;
+    border: 3px solid  #007BFF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 98%;
+    margin:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.cont_visita {
+    width: 95%;
+    margin:5px;
+    font-family: sans-serif;
+    border: 3px solid  #007BFF;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 90%;
+}
+
+.sub_texto{
+    width: 70%;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 90%;
+}
+
+.titulo h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.sub_texto h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los elementos del formulario */
+.elemento {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 2px solid black;
+    border-top: none;
+    border-radius: 3px;
+    color: black;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    width: 300px;
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    padding: 0 4px;
+    font-weight: 100;
+    color: black;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+input:not(:placeholder-shown) ~ label,
+input:focus ~ label,
+select:not(:placeholder-shown) ~ label,
+select:focus ~ label,
+textarea:not(:placeholder-shown) ~ label,
+textarea:focus ~ label {
+    top: -8px;
+    font-size: 14px;
+    color: black;
+}
+
+select {
+    appearance: none; /* Remove default arrow in Chrome and Safari */
+}
+
+/* Estilos para el botón de envío */
+.boton_guardar {
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1D5D9B;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #15416E;
+}

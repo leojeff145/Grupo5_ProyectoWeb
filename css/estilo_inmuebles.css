@@ -1,41 +1,41 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.cont_img{
+.cont_img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
     padding: 5%;
 }
 
-.elemnto_gal{
+.elemnto_gal {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
 }
 
-article{
+article {
     position: relative;
     width: 100%;
     height: auto;
     transition: all 0.3s ease;
 }
 
-article img:first-child{
-    box-shadow: 0 60px 60px -60px rgba(0,30,255,0.5);
+article img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     border-radius: 10px;
     object-fit: cover;
     width: 100%;
     height: auto;
 }
 
-article img:last-child{
+article img:last-child {
     position: absolute;
     width: 25%;
     height: auto;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
     margin: auto;
     transform: translateY(25%);
@@ -43,31 +43,79 @@ article img:last-child{
     opacity: 0;
 }
 
-article:hover{
-    transform: perspective(250px)
-    rotatex(10deg)
-    translateY(-5%)
-    translateZ(0);
+article:hover {
+    transform: perspective(250px) rotatex(10deg) translateY(-5%) translateZ(0);
 }
 
-article::before{
-    content:'';
+article::before {
+    content: '';
     position: absolute;
     bottom: 0;
     height: 100%;
     width: 100%;
 
-    background-image: linear-gradient(to bottom,transparent 10%,rgba(0,0,0,0.5) 50%,rgba(0,0,0)95%);
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0)95%);
     opacity: 0;
     transition: all .3s ease;
 
 }
 
-article:hover::before{
+article:hover::before {
     opacity: 1;
 }
 
-article:hover img:last-child{
+article:hover img:last-child {
     opacity: 1;
     transform: translateY(10%);
+}
+
+/* Estilos para .radio_btn y sus elementos */
+.radio_btn {
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 2; /* Asegurar que .radio_btn esté en una capa superior */
+}
+
+.radio_btn input[type="radio"] {
+    position: absolute;
+    z-index: 1; /* Asegurar que los input type radio estén en una capa inferior */
+    opacity: 0; /* Ocultar el input radio */
+}
+
+.radio_btn label {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Asegurar que el label esté posicionado */
+    z-index: 2; /* Asegurar que el label esté en la misma capa que .radio_btn */
+}
+
+.radio_btn label:hover {
+    background-color: #e0e0e0;
+}
+
+.radio_btn input[type="radio"]:checked+label {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    animation: pulse 0.6s;
+}
+
+/* Animación al seleccionar el radio button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

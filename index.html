@@ -7,8 +7,6 @@
     <title>Home Token</title>
     <link rel="stylesheet" href="css/estilo_principal.css" type="text/css">
     <link rel="shortcut icon" href="img/logot.png" type="image/x-icon">
-    <script src="js/main.js"></script>
-    <script src="js/enlaces.js"></script>
 </head>
 
 <body>
@@ -17,38 +15,37 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logot.png" alt="logo"></a>
             </div>
-            <button class="botones" id="openModal" onclick="openModal()">Iniciar Sesión</button>
-            <button class="botones" id="openModal" onclick="openModal_r()">Registrarse</button>
-            <dialog id="myModal">
-                <button id="closeModal" onclick="closeModal()">&times;</button>
-                <iframe src="html/login.html"></iframe>
-            </dialog>
-            <dialog id="modal_r">
-                <button id="closeModal" onclick="closeModal_r()">&times;</button>
-                <iframe src="html/register.html"></iframe>
-            </dialog>
             <script src="js/main.js"></script>
+            <button class="botones" id="openLogin" onclick="openModal('loginForm')">Iniciar Sesión</button>
+            <button class="botones" id="openRegister" onclick="openModal('registerForm')">Registrarse</button>
+
+            <dialog id="myModal">
+            
+            </dialog>
+
+
+
         </div>
 
         <div class="navbar" id="menu">
-            <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
-            <ul>                
-                <li><a href="#" id="inicio">Inicio</a></li>
-                <li><a class="dropdown-arrow" href="#">Comprar</a>
-                    <ul class="sub-menus">
-                        <li><a href="#" id="comp_casa">Casa</a></li>
-                        <li><a href="#" id="comp_depar">Departamento</a></li>
-                        <li><a href="#" id="comp_terreno">Terreno/Lote</a></li>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <li><a href='index.html'>Inicio</a></li>
+                <li><a class='dropdown-arrow' href='#'>Comprar</a>
+                    <ul class='sub-menus'>
+                        <li><a href='#' id="comp_casa">Casa</a></li>
+                        <li><a href='#' id="comp_depar">Departamento</a></li>
+                        <li><a href='#' id="comp_terreno">Terreno/Lote</a></li>
                     </ul>
                 </li>
-                <li><a class="dropdown-arrow" href="#">Alquilar</a>
+                <li><a class='dropdown-arrow' href='#'>Alquilar</a>
                     <ul class='sub-menus'>
                         <li><a href='#' id="arriendo_casa">Casa</a></li>
                         <li><a href='#' id="arriendo_depar">Departamento</a></li>
                         <li><a href='#' id="arriendo_terreno">Terreno/Lote</a></li>
                     </ul>
                 <li><a href='#' id="opcion_quienes">Quienes Somos</a></li>
-                <li><a href='#'>Contactos</a></li>
+                <li><a href='#'id="opc_contacto">Contactos</a></li>
             </ul>
             </nav>
             <script src="js/enlaces.js"></script>
@@ -71,7 +68,15 @@
                         <img src="img/animacion2.gif" alt="animacion">
                     </div>
                 </div>
-                <div class="mensajes">
+                <div class="mensajes" id="mensaje">
+                    <div class="btn_contacto">
+                        <button class="botones" id="btn_visita"><img src="img/calendario.svg" alt=""><span>Visita</span></button>
+                        <button class="botones" id="btn_contacto"><img src="img/mensajes.svg" alt=""><span>Contactanos</span></button>                        
+                        <a href="https://wa.link/96y490" target="_blank"><button class="botones" id="btn_whatsapp"><img src="img/whatsapp.svg" alt=""><span>Whatsapp</span></button></a>
+                    </div>
+                    <div class="form_contacto"id="ver_form">
+
+                    </div>
 
                 </div>
             </div>

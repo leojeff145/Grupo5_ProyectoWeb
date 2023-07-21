@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById('inicio').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                document.getElementById('mostrar').innerHTML = xhr.responseText;
-            }
-        };
-        xhr.open('GET', 'html/document.html', true);
-        xhr.send();
-    });
-	
     document.getElementById('opcion_quienes').addEventListener('click', function (event) {
         event.preventDefault();
 
@@ -63,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         xhr.open('GET', 'html/terreno.html', true);
         xhr.send();
-    });
+    });   
 
     //galeria arrriendo
     document.getElementById('arriendo_casa').addEventListener('click', function (event) {
@@ -144,4 +131,62 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.open('GET', 'html/cookies.html', true);
         xhr.send();
     });
+
+    document.getElementById('btn_contacto').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('ver_form').innerHTML = xhr.responseText;
+
+                // Accede al archivo JavaScript asignado en el contenido cargado
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'js/validacion_groupbutton.js';
+                document.getElementById('ver_form').appendChild(scriptElement);
+            }
+        };
+        xhr.open('GET', 'html/form_contacto.html', true);
+        xhr.send();
+    });
+
+    document.getElementById('opc_contacto').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('ver_form').innerHTML = xhr.responseText;
+
+                // Accede al archivo JavaScript asignado en el contenido cargado
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'js/validacion_groupbutton.js';
+                document.getElementById('ver_form').appendChild(scriptElement);
+            }
+        };
+        xhr.open('GET', 'html/form_contacto.html', true);
+        xhr.send();
+    });
+
+    document.getElementById('btn_visita').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('ver_form').innerHTML = xhr.responseText;
+
+                // Accede al archivo JavaScript asignado en el contenido cargado
+                var scriptElement = document.createElement('script');
+                var scriptElement2 = document.createElement('script');
+                scriptElement.src = 'js/validacion_groupbutton.js';
+                scriptElement2.src = 'js/validarci.js';
+                document.getElementById('ver_form').appendChild(scriptElement);
+                document.getElementById('ver_form').appendChild(scriptElement2);
+            }
+        };
+        xhr.open('GET', 'html/form_visita.html', true);
+        xhr.send();
+    });
 });
+

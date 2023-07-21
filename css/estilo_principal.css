@@ -9,9 +9,9 @@ body {
 .parent {
     display: grid;
     grid-template-areas: 'cabecera  cabecera    cabecera'
-                         'navbar     navbar      navbar'
-                         'contenido  contenido   contenido'
-                         'pie        pie         pie';
+        'navbar     navbar      navbar'
+        'contenido  contenido   contenido'
+        'pie        pie         pie';
     grid-template-rows: auto auto auto auto;
     height: 100%;
     width: 100%;
@@ -61,14 +61,24 @@ iframe {
 
 }
 
-#closeModal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
+/* Estilos para el modal */
+#myModal {
+    width: 35%;
+    height: 62%;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+#myModal button.closeModal {
+    float: right;
+}
+
+#myModal button.submitButton {
+    margin-top: 10px;
+    float: right;
 }
 
 
@@ -76,7 +86,7 @@ iframe {
     grid-area: navbar;
     position: sticky;
     top: 0;
-    z-index: 100;    
+    z-index: 100;
 }
 
 #menu {
@@ -234,7 +244,7 @@ iframe {
     grid-area: contenido;
     display: grid;
     grid-template-areas: 'galeria   galeria   galeria'
-                         'subContenido   subContenido   subContenido';
+        'subContenido   subContenido   subContenido';
 
 }
 
@@ -272,7 +282,7 @@ iframe {
     grid-area: subContenido;
     display: grid;
     grid-template-areas: 'casas casas casas mensaje';
-    grid-template-columns: auto auto auto 20%;
+    grid-template-columns: auto auto auto 35%;
 }
 
 
@@ -282,16 +292,16 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-}   
-
-.contenido .subContenido .casas .cont_gif{  
-    width: 80%;
-    height: auto;
-    margin-top: 20px;    
+    align-items: center;
 }
 
-.contenido .subContenido .casas .cont_gif > img{
+.contenido .subContenido .casas .cont_gif {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.contenido .subContenido .casas .cont_gif>img {
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -299,14 +309,86 @@ iframe {
 
 .contenido .subContenido .mensajes {
     grid-area: mensaje;
+    display: grid;
+    grid-template-areas: 'botones'
+        'formulario';
+    grid-template-rows: 8% auto;
 }
+
+.contenido .subContenido .mensajes .btn_contacto {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #00ace8;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    color: #00ace8;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    fill: #00ace8;
+}
+
+button span {
+    margin: 10px;
+}
+
+button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+button:hover {
+    fill: #fff;
+    color: #fff;
+    border: 1px solid #00ace8;
+}
+
+button:hover::before {
+    box-shadow: inset 0 0 0 10em #00ace8;
+}
+
+.contenido .subContenido .mensajes .form_contacto {
+    grid-area: formulario;
+}
+
 
 .pie {
     grid-area: pie;
     display: grid;
     background-color: #007BFF;
     grid-template-areas: 'redS  infoCont  polit   mapa'
-                         'derecho derecho derecho derecho';
+        'derecho derecho derecho derecho';
     grid-template-columns: 20% 20% 15% auto;
     grid-template-rows: 80% 20%;
     gap: 5px;

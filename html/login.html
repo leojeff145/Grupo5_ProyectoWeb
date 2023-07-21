@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link href="../css/estilo_log_in.css" rel="stylesheet" type="text/css">
-    <script src="../js/main.js"></script>
+    <link href="css/estilo_log_in.css" rel="stylesheet" type="text/css">          
 </head>
 
 <body>
@@ -15,19 +14,20 @@
             <h1>Iniciar Sesión</h1>
         </div>
         <div class="imagen">
-            <img src="../img/user.png" alt="usuario">
+            <img src="img/user.png" alt="usuario">
         </div>
-        <form class="log_in" method="" action="" >
+        <form class="log_in" method="post"  id="loginForm"> 
+            <script src="../js/main.js"></script>  
             <div class="elemento">
-                <input type="text" name="usuario" placeholder=" ">
+                <input type="text" id="usuario" name="usuario" placeholder=" " required>
                 <label for="input">Usuario</label>
             </div>
             <div class="elemento">
-                <input type="password" name="password" placeholder=" ">
+                <input type="password" id="password" name="password" placeholder=" " required>
                 <label for="input">Contraseña</label>
             </div>
             <div class="boton_log_in">
-                <input type="submit" value="Iniciar Sesion">            
+                <input type="submit" value="Iniciar Sesion" onclick="validateLoginForm()">            
             </div>
         </form>
     </div>

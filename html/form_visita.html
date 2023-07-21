@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario visita</title>
+    <link rel="stylesheet" href="css/contacto.css" type="text/css">
+</head>
+
+<body>
+    <div class="cont_visita">
+        <div class="titulo">
+            <h3>Solicita Visita a Tu Futuro Hogar</h3>
+        </div>
+        <div class="sub_texto">
+            <p>
+                Su tiempo es nuestra prioridad, agende una visita presencial de acuerdo a su
+                disponibilidad de horario.
+            </p>
+        </div>
+
+        <form  class="visita_form" id="form" method="post" action="php/envio2.php">
+            <input type="hidden" name="casamodelo_hidden" id="casamodelo_hidden">
+            <div class="elemento">                
+                <input class="form-input" type="text" id="nombres" name="nombres" required>
+                <label class="form-label" for="nombres">Nombres Completos:</label>
+            </div>
+            <div class="elemento">                
+                <input class="form-input" type="email" id="email" name="email" required>
+                <label class="form-label" for="email">Email:</label>
+            </div>
+            <div class="elemento">                
+                <input type="datetime-local" class="form-input" id="fechah" name="fechah" required>
+                <label class="form-label" for="fechah">Fecha y hora</label>
+            </div>
+            <div class="elemento">                
+                <input type="text" id="cedula" name="cedula" onblur="validarCedula()">
+                <label for="cedula">Cédula:</label>
+            </div>
+            <div class="elemento">                
+                <input class="form-input" type="text" id="numero" name="numero" required>
+                <label class="form-label" for="numero">Número celular (+593):</label>
+            </div>
+            <div class="boton_envio">
+                <input type="submit" value="Enviar Email">
+            </div>            
+        </form>
+    </div>
+</body>
+
+</html>

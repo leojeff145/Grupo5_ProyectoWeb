@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contacto.css" type="text/css">
+    <title>Form Contacto</title>
+</head>
+
+<body>
+    <div class="cont_envio">
+        <div class="titulo">
+            <h3>Contacta con nosotros</h3>
+        </div>
+        <div class="sub_texto">
+            <p>Escoge tu casa/departemaneto de preferencia y nos contactaremos contigo para brindarte mayor
+                información.
+            </p>
+        </div>
+        <form class="envio_form" id="form" method="post" action="php/envio.php">
+            <input type="hidden" name="casamodelo_hidden" id="casamodelo_hidden">
+            <div class="elemento">                
+                <input class="form-input" type="email" id="email" name="email" required>
+                <label class="form-label" for="email">Email:</label>
+            </div>
+            <div class="elemento">                
+                <input class="form-input" type="text" id="nombres" name="nombres" required>
+                <label class="form-label" for="nombres">Nombres Completos:</label>
+            </div>
+            <div class="elemento">
+                <input class="form-input" type="text" id="numero" name="numero" required>
+                <label class="form-label" for="numero">Número celular (+593):</label>                
+            </div>
+            <div class="elemento">                
+                <select class="form-input" name="piezas" id="piezas" required>
+                    <option selected disabled hidden value="">Elegir...</option>
+                    <option value="1 habitación">1 habitación</option>
+                    <option value="2 habitaciones">2 habitaciones</option>
+                    <option value="3 o más habitaciones">3 o más habitaciones</option>
+                </select>
+                <label class="form-label" for="piezas">Piezas de interés:</label>
+            </div>
+            <div class="elemento">
+                <textarea class="form-input" id="mensaje" name="mensaje" required></textarea>
+                <label class="form-label" for="mensaje">Mensaje:</label>                
+            </div>
+            <div class="boton_envio">
+                <input type="submit" value="Enviar Email">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

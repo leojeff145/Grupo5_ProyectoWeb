@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link href="../css/registro.css" rel="stylesheet" type="text/css">
+    <link href="css/registro.css" rel="stylesheet" type="text/css">
     <script src="../js/main.js"></script>
 </head>
 
@@ -15,27 +15,32 @@
             <h1>Registro</h1>
         </div>
         <div class="imagen">
-            <img src="../img/user.png" alt="usuario">
+            <img src="img/user.png" alt="usuario">
         </div>
-        <form class="register_form" method="" action="">
+        <form class="register_form" method="post" id="registerForm">
+            <script src="js/main.js"></script>
             <div class="elemento">
-                <input type="text" name="nombre" placeholder=" ">
+                <input type="text" name="usuario" placeholder=" " required>
+                <label for="input">Usuario</label>
+            </div>
+            <div class="elemento">
+                <input type="text" name="nombre" placeholder=" " required>
                 <label for="input">Nombre</label>
             </div>
             <div class="elemento">
-                <input type="text" name="apellido" placeholder=" ">
+                <input type="text" name="apellido" placeholder=" " required>
                 <label for="input">Apellido</label>
             </div>
             <div class="elemento">
-                <input type="email" name="email" placeholder=" ">
+                <input type="email" name="email" placeholder=" " required>
                 <label for="input">Correo Electrónico</label>
             </div>
             <div class="elemento">
-                <input type="password" name="password" placeholder=" ">
+                <input type="password" name="password" placeholder=" " required>
                 <label for="input">Contraseña</label>
             </div>
             <div class="boton_register">
-                <input type="submit" value="Registrarse">
+                <input type="submit" value="Registrarse" onclick="validateRegisterForm()">
             </div>
         </form>
     </div>    
