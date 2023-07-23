@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.open('GET', 'sis_html/quienes_somos.html', true);
         xhr.send();
     });
-
+	
     //galeria compra
     document.getElementById('comp_casa').addEventListener('click', function (event) {
         event.preventDefault();

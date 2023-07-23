@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document CSS PARA FOMULARIOS*/
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="date"],
+        form input[type="time"],
+        form select,
+        form input[type="range"],
+        form input[type="color"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        form input[type="radio"],
+        form input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        form table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        form table th,
+        form table td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="button"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        form input[type="button"]:hover {
+            background-color: #45a049;
+        }
+

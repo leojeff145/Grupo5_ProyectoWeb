@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+header, nav, section, footer {
+  padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a.active {
+  background-color: #333;
+  color: #fff;
+}
+
+nav a:hover {
+  background-color: #ddd;
+}
+
+/* Estilos del contenido principal */
+#content {
+  background-color: #f9f9f9;
+  padding: 40px;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+header, nav, section, footer {
+  padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  background-color: #ddd;
+}
+
+/* Estilos del contenido principal */
+#content {
+  background-color: #f9f9f9;
+  padding: 40px;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.contenido {
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas: 'galeria   galeria   galeria'
+        'subContenido   subContenido   subContenido';
+
+}
+
+.contenido .galeria {
+    display: flex;
+    grid-area: galeria;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido .galeria section {
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+
+.contenido .galeria section img {
+    border-radius: 10px;
+    margin: 5px;
+    width: 0%;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 8;
+    transition: .5s ease;
+}
+
+.contenido .galeria section img:hover {
+    cursor: crosshair;
+    width: 70%;
+    opacity: 1;
+}
+
+
+.contenido .subContenido {
+    grid-area: subContenido;
+    display: grid;
+    grid-template-areas: 'casas casas casas mensaje';
+    grid-template-columns: auto auto auto 35%;
+}
+
+
+
+.contenido .subContenido .casas {
+    grid-area: casas;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido .subContenido .casas .cont_gif {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.contenido .subContenido .casas .cont_gif>img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.contenido .subContenido .mensajes {
+    grid-area: mensaje;
+    display: grid;
+    grid-template-areas: 'botones'
+        'formulario';
+    grid-template-rows: 8% auto;
+}
+
+.contenido .subContenido .mensajes .btn_contacto {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+

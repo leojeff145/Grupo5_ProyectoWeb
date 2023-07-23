@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="css/frmcss.css" rel="stylesheet" type="text/css" >
+	 
+	 <script src="js/redireccionar.js"></script>
+	
+
+</head>
+
+<body>
+    <form><p><b>¡HOLA! BIENVENIDO, PUBLICA TUS PROPIEDADES AQUÍ</b></p>
+      <p>
+	Necesitamos validar tu identidad, llena por favor .		
+		
+	  </p>
+       <label for="cedula">Cédula de identidad:</label>
+<input type="text" id="cedula" onblur="validarCedula()" onkeyup="habilitarBoton()">
+<br><br>
+
+<input type="button" value="Siguiente" id="btnIrAValidaciones" disabled>
+
+			 
+  
+		
+</form>
+
+   
+</body>
+
+</html>

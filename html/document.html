@@ -7,6 +7,11 @@
     <title>Inicio</title>
 
     <style>
+		
+		main {
+            padding: 20px;
+        }
+		
         .content-with-image {
             display: flex;
             align-items: center;
@@ -20,7 +25,7 @@
         .content-with-image img {
             flex: 1;
             padding: 10px;
-            max-width: 50%;
+            max-width: 40%;
             height: auto;
             transition: opacity 0.5s ease;
         }
@@ -80,7 +85,7 @@
             images.forEach((image) => {
                 const imgTop = image.offsetTop;
                 const imgHeight = image.offsetHeight;
-                const opacity = 1 - (imgTop - scrollTop - windowHeight) / windowHeight;
+                const opacity = 1 - (imgTop - scrollTop - windowHeight) windowHeight;
                 image.style.opacity = Math.min(Math.max(opacity, 0), 1).toFixed(2);
             });
         }
