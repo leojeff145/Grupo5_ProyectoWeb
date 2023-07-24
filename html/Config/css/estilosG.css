@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2 {
-  color: #333;
+  color: #0056B3;
 }
 
 header, nav, section, footer {
@@ -16,7 +16,7 @@ header, nav, section, footer {
 
 /* Estilos del encabezado */
 header {
-  background-color: #333;
+  background-color: #0056B3;
   color: #fff;
 }
 
@@ -39,11 +39,11 @@ nav a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: #0056B3;
 }
 
 nav a.active {
-  background-color: #333;
+  background-color: #0056B3;
   color: #fff;
 }
 
@@ -59,7 +59,7 @@ nav a:hover {
 
 /* Estilos del pie de página */
 footer {
-  background-color: #333;
+  background-color: #0056B3;
   color: #fff;
   text-align: center;
 }
@@ -71,7 +71,7 @@ body {
 }
 
 h1, h2 {
-  color: #333;
+  color: #0056B3;
 }
 
 header, nav, section, footer {
@@ -80,7 +80,7 @@ header, nav, section, footer {
 
 /* Estilos del encabezado */
 header {
-  background-color: #333;
+  background-color: #0056B3;
   color: #fff;
 }
 
@@ -103,7 +103,7 @@ nav a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: #0056B3;
 }
 
 nav a:hover {
@@ -118,7 +118,7 @@ nav a:hover {
 
 /* Estilos del pie de página */
 footer {
-  background-color: #333;
+  background-color: #0056B3;
   color: #fff;
   text-align: center;
 }

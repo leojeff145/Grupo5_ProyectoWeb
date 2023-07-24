@@ -1,9 +1,10 @@
-const images = document.querySelectorAll(".gallery img");
-const overlay = document.querySelector(".overlay");
-const overlayImg = document.querySelector(".overlay-img");
-const closeBtn = document.querySelector(".close-btn");
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
+function galeria(){    
+let images = document.querySelectorAll(".gallery  img");
+let overlay = document.querySelector(".overlay");
+let overlayImg = document.querySelector(".overlay-img");
+let closeBtn = document.querySelector(".close-btn");
+let prevBtn = document.querySelector(".prev-btn");
+let nextBtn = document.querySelector(".next-btn");
 let currentIndex = 0;
 
 images.forEach((image, index) => {
@@ -35,3 +36,6 @@ nextBtn.addEventListener("click", () => {
         showImage();
     }
 });
+}
+
+galeria();
