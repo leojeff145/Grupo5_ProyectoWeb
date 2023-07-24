@@ -20,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 document.getElementById('mostrar').innerHTML = xhr.responseText;
+
+                // Accede al archivo JavaScript asignado en el contenido cargado
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'js/enlaces_detalle.js';
+                document.getElementById('mostrar').appendChild(scriptElement);
             }
         };
         xhr.open('GET', 'html/casa.html', true);
@@ -140,10 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 document.getElementById('ver_form').innerHTML = xhr.responseText;
 
-                // Accede al archivo JavaScript asignado en el contenido cargado
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'js/validacion_groupbutton.js';
-                document.getElementById('ver_form').appendChild(scriptElement);
             }
         };
         xhr.open('GET', 'html/form_contacto.html', true);
@@ -157,11 +158,6 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 document.getElementById('ver_form').innerHTML = xhr.responseText;
-
-                // Accede al archivo JavaScript asignado en el contenido cargado
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'js/validacion_groupbutton.js';
-                document.getElementById('ver_form').appendChild(scriptElement);
             }
         };
         xhr.open('GET', 'html/form_contacto.html', true);
@@ -176,17 +172,80 @@ document.addEventListener('DOMContentLoaded', function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 document.getElementById('ver_form').innerHTML = xhr.responseText;
 
-                // Accede al archivo JavaScript asignado en el contenido cargado
-                var scriptElement = document.createElement('script');
-                var scriptElement2 = document.createElement('script');
-                scriptElement.src = 'js/validacion_groupbutton.js';
-                scriptElement2.src = 'js/validarci.js';
+                var scriptElement = document.createElement('script');                
+                scriptElement.src = 'js/validarci.js';
                 document.getElementById('ver_form').appendChild(scriptElement);
-                document.getElementById('ver_form').appendChild(scriptElement2);
             }
         };
         xhr.open('GET', 'html/form_visita.html', true);
         xhr.send();
-    });
+    });   
 });
 
+function llamar_detalle_casa(){
+    // Realizar la solicitud GET y cargar contenido y script de manera asincrónica
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('galeria_in').innerHTML = xhr.responseText;
+
+            // Accede al archivo JavaScript asignado en el contenido cargado
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'js/fun_detalle.js';
+            document.getElementById('galeria_in').appendChild(scriptElement);
+        }
+    };
+    xhr.open('GET', 'html/arriendo_casa.html', true);
+    xhr.send();
+}
+
+function llamar_detalle_casa1(){
+    // Realizar la solicitud GET y cargar contenido y script de manera asincrónica
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('galeria_in').innerHTML = xhr.responseText;
+
+            // Accede al archivo JavaScript asignado en el contenido cargado
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'js/fun_detalle.js';
+            document.getElementById('galeria_in').appendChild(scriptElement);
+        }
+    };
+    xhr.open('GET', 'html/arriendo_casa_1.html', true);
+    xhr.send();
+}
+
+function llamar_detalle_depa(){
+    // Realizar la solicitud GET y cargar contenido y script de manera asincrónica
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('galeria_in').innerHTML = xhr.responseText;
+
+            // Accede al archivo JavaScript asignado en el contenido cargado
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'js/fun_detalle.js';
+            document.getElementById('galeria_in').appendChild(scriptElement);
+        }
+    };
+    xhr.open('GET', 'html/arriendo_depa.html', true);
+    xhr.send();
+}
+
+function llamar_detalle_depa1(){
+    // Realizar la solicitud GET y cargar contenido y script de manera asincrónica
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('galeria_in').innerHTML = xhr.responseText;
+
+            // Accede al archivo JavaScript asignado en el contenido cargado
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'js/fun_detalle.js';
+            document.getElementById('galeria_in').appendChild(scriptElement);
+        }
+    };
+    xhr.open('GET', 'html/arriendo_depa_1.html', true);
+    xhr.send();
+}

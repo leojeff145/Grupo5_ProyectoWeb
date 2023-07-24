@@ -86,7 +86,7 @@ iframe {
     grid-area: navbar;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1;
 }
 
 #menu {
@@ -281,18 +281,43 @@ iframe {
 .contenido .subContenido {
     grid-area: subContenido;
     display: grid;
-    grid-template-areas: 'casas casas casas mensaje';
-    grid-template-columns: auto auto auto 35%;
+    grid-template-areas: 'casas casas casas casas casas  mensaje'; 
 }
-
-
 
 .contenido .subContenido .casas {
     grid-area: casas;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+}
+
+.testimonios {
+    padding: 30px;
+}
+
+.testimonio {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.testimonio p {
+    font-style: italic;
+    color: #333;
+}
+
+.testimonio img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.mensaje_atencion {
+    padding: 50px;
+    text-align: justify;
 }
 
 .contenido .subContenido .casas .cont_gif {
@@ -308,18 +333,19 @@ iframe {
 }
 
 .contenido .subContenido .mensajes {
-    grid-area: mensaje;
+    grid-area: mensaje;    
     display: grid;
+    margin: 0;
     grid-template-areas: 'botones'
-        'formulario';
-    grid-template-rows: 8% auto;
+                        'formulario';
+    grid-template-rows: 70px auto;
 }
 
 .contenido .subContenido .mensajes .btn_contacto {
     grid-area: botones;
     display: flex;
-    justify-content: space-around;
-    align-items: center;  
+    align-items: start;
+    justify-content: center; 
 }
 
 a {
@@ -332,7 +358,7 @@ button {
     padding: 5px 15px;
     display: flex;
     align-items: center;
-    font-size: 17px;
+    font-size: 100%;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -344,6 +370,7 @@ button {
     transition: color 0.3s 0.1s ease-out;
     text-align: center;
     fill: #00ace8;
+    margin: 5px;
 }
 
 button span {
@@ -378,8 +405,10 @@ button:hover::before {
     box-shadow: inset 0 0 0 10em #00ace8;
 }
 
+
 .contenido .subContenido .mensajes .form_contacto {
-    grid-area: formulario;
+    grid-area: formulario; 
+    margin: 0;   
 }
 
 

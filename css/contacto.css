@@ -2,10 +2,10 @@
 /* CSS Document */
 /* Estilos generales del formulario */
 .cont_envio {
-    width: 95%;
-    margin:5px;
+    width: 100%;
+    height: auto;
+    margin:10px;
     font-family: sans-serif;
-    border: 3px solid  #007BFF;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,8 @@
 }
 
 form{
-    width: 98%;
+    width: 70%;
+    height: auto;
     margin:20px;
     display: flex;
     flex-direction: column;
@@ -23,10 +24,10 @@ form{
 }
 
 .cont_visita {
-    width: 95%;
+    width: 100%;
+    height: auto;
     margin:5px;
     font-family: sans-serif;
-    border: 3px solid  #007BFF;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -36,6 +37,7 @@ form{
 
 .titulo{
     width: 50%;
+    height: auto;
     text-align: center;
     margin-bottom: 20px;
     font-size: 90%;
@@ -43,6 +45,7 @@ form{
 
 .sub_texto{
     width: 70%;
+    height: auto;
     text-align: justify;
     margin-bottom: 20px;
     font-size: 90%;

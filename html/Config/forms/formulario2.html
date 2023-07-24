@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link href="css/frmcss.css" rel="stylesheet" type="text/css" >
-	 
-	 <script src="js/redireccionar.js"></script>
-	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link href="css/frmcss.css" rel="stylesheet" type="text/css">
+
+  <script src="js/redireccionar.js"></script>
+
 
 </head>
 
 <body>
-    <form><p><b>¡HOLA! BIENVENIDO, PUBLICA TUS PROPIEDADES AQUÍ</b></p>
-      <p>
-	Necesitamos validar tu identidad, llena por favor .		
-		
-	  </p>
-       <label for="cedula">Cédula de identidad:</label>
-<input type="text" id="cedula" onblur="validarCedula()" onkeyup="habilitarBoton()">
-<br><br>
+  <form>
+    <p><b>¡HOLA! BIENVENIDO, PUBLICA TUS PROPIEDADES AQUÍ</b></p>
+    <p>
+      Necesitamos validar tu identidad, llena por favor .
 
-<input type="button" value="Siguiente" id="btnIrAValidaciones" disabled>
+    </p>
+    <label for="cedula">Cédula de identidad:</label>
+    <input type="text" id="cedula" onblur="validarCedula()" onkeyup="habilitarBoton()">
+    <br><br>
 
-			 
-  
-		
-</form>
+    <input type="button" value="Siguiente" id="btnIrAValidaciones" disabled>
 
-   
+
+
+
+  </form>
+
+
 </body>
 
 </html>

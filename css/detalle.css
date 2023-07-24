@@ -1,0 +1,165 @@
+@charset "utf-8";
+/*CSS Document */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 200px;
+    /* Ajusta el tamaño de las imágenes según tus necesidades */
+    height: 150px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.overlay-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close-btn {
+    top: 10px;
+    right: 20px;
+}
+
+.prev-btn {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.next-btn {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/*Contenedor principal*/
+.cont_detalle {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.titulo_casa h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detalle_general {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+}
+
+.detalle {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.detalle h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.detalle ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detalle li {
+    margin-bottom: 8px;
+}
+
+.detalle li:before {
+    content: "\2022";
+    /* Agrega un bullet antes de cada ítem */
+    margin-right: 5px;
+}
+
+/*Estilo para el encabezado y el pie de la galería:*/
+
+.gallery {
+    margin-top: 30px;
+}
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    z-index: 2;
+}
+
+.overlay .close-btn {
+    top: 10px;
+    right: 20px;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.overlay .prev-btn,
+.overlay .next-btn {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.overlay .prev-btn {
+    left: 20px;
+}
+
+.overlay .next-btn {
+    right: 20px;
+}
